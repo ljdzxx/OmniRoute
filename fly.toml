@@ -9,8 +9,11 @@ primary_region = 'sin'
 [build]
 
 [processes]
-  app = 'node ./dbsetup.js node healthcheck.mjs'
+  app = 'node run-standalone.mjs'
 
+[deploy]
+  release_command = "node ./dbsetup.js"
+  
 [[mounts]]
   source = 'data'
   destination = '/data'
