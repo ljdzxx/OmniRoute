@@ -31,3 +31,11 @@ primary_region = 'sin'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
+
+[env]
+  TZ = "Asia/Shanghai"
+  
+  # === 新增以下这三行，强行让程序监听所有外部 IP ===
+  HOST = "0.0.0.0"
+  HOSTNAME = "0.0.0.0"
+  BIND = "0.0.0.0"
